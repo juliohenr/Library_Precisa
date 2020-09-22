@@ -3,7 +3,7 @@
     display: grid;  
     font-family: Arial, Helvetica, sans-serif;
     grid-template-areas: "cabecalho" "conteudo" "rodape";
-    grid-template-columns: auto;
+    grid-template-columns: 100%;
     grid-template-rows: 50px 3000px 20px;
     
 }
@@ -80,7 +80,7 @@
 
     font-family: 'Indie Flower', cursive;
 
-    font-size: 80px;
+    font-size: 100px;
 
     
 
@@ -99,10 +99,121 @@
 
     font-family: 'Neucha', cursive;
 
-    font-size: 40px;
+    font-size: 80px;
 
     margin-left: 50px;
 
 
 }
 
+
+
+.element-carousel {
+
+    
+
+    background: black;
+
+    color: white;
+
+
+
+    align-items: center !important;
+
+
+    text-align: center !important;
+
+    justify-content: center !important;
+
+
+    width: 300px !important;
+
+    height: 400px !important;
+
+    margin-right: 20px;
+
+    display: grid !important;
+
+    grid-template-columns: 100% ;
+    grid-template-rows: 75% 15% 10% ;
+
+
+}
+
+
+.text-element-carousel {
+
+
+    grid-row: 2 / 2;
+
+    grid-column: 1 / 1;
+
+    font-size: 20px;
+
+    font-family: 'Indie Flower', cursive;
+
+
+}
+
+
+
+.image-element-carousel {
+
+    grid-row: 1 / 1;
+
+    grid-column: 1 / 1;
+
+    height: 100%;
+
+    width: 100%;
+
+}
+
+
+.button-element-carousel {
+
+
+    grid-row: 3 / 3;
+
+    grid-column: 1 / 1;
+
+
+    height: 25px;
+
+    width: 100px;
+    margin: auto;  
+
+    background-color: #DB7093;
+
+    border-radius: 2px;
+
+    border: black;
+
+    color: black;
+
+    font-family: 'Indie Flower', cursive;
+
+    font-size: 20px;
+
+
+
+}
+
+.button-element-carousel:hover {
+
+    background-color: gray;
+
+    color: white;
+
+}
+
+.carousel-fantasia {
+
+    grid-row: 3 / 5;
+
+    grid-column: 1 / 11;
+
+    margin-left: 50px;
+
+    margin-right: 50px;
+}
