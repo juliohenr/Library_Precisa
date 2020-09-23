@@ -4,7 +4,7 @@
     font-family: Arial, Helvetica, sans-serif;
     grid-template-areas: "cabecalho" "conteudo" "rodape";
     grid-template-columns: 100%;
-    grid-template-rows: 50px 3000px 20px;
+    grid-template-rows: 50px 3700px 20px;
     
 }
 
@@ -13,7 +13,8 @@
     grid-area: cabecalho;
     /*background: linear-gradient(to right,rgb(0, 0, 0),rgb(0, 0, 0));*/
     /*background:red;*/
-    background:black;
+    background: linear-gradient(to right,rgb(13, 14, 13),rgb(45, 46, 45));
+    
     color: white;
 
     
@@ -24,7 +25,8 @@
 
     grid-area: conteudo;
     /*background: linear-gradient(to right,rgb(23, 66, 6),rgb(3, 32, 4))*/
-    background: url("old_paper_texture4.jpg") center / cover no-repeat;
+    /*background: url("old_paper_texture4.jpg") center / cover no-repeat;*/
+    background: linear-gradient(to right,rgb(13, 14, 13),rgb(45, 46, 45));
  
     display: grid;  
     grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
@@ -37,7 +39,9 @@
 .footer {
     grid-area: rodape;
     /*background: linear-gradient(to right,rgb(23, 66, 6),rgb(99, 7, 86))*/
-    background: black;
+
+    background: linear-gradient(to right,rgb(13, 14, 13),rgb(45, 46, 45));
+
     color: white;
 }
 
@@ -58,6 +62,7 @@
     font-size: 80px;
 
     background: #DB7093;
+
 
     display: grid;
 
@@ -103,6 +108,8 @@
 
     margin-left: 50px;
 
+    color: white;
+
 
 }
 
@@ -112,9 +119,15 @@
 
     
 
-    background: black;
+    background: linear-gradient(to left,rgb(13, 14, 13),rgb(45, 46, 45));
 
     color: white;
+
+   
+
+    border: 1px solid white;
+
+    
 
 
 
@@ -126,16 +139,26 @@
     justify-content: center !important;
 
 
-    width: 300px !important;
+    width: 270px !important;
 
-    height: 400px !important;
+    height: 370px !important;
 
-    margin-right: 20px;
+    margin-right: 10px;
+
+    margin-left: 10px;
 
     display: grid !important;
 
     grid-template-columns: 100% ;
     grid-template-rows: 75% 15% 10% ;
+
+
+}
+
+
+.element-carousel:hover {
+
+    border: 1px solid #DB7093;
 
 
 }
@@ -166,6 +189,8 @@
     height: 100%;
 
     width: 100%;
+
+    border: black;
 
 }
 
@@ -207,9 +232,235 @@
 
 }
 
+
+
+
+
+
+.title-fantasy {
+
+
+    grid-row: 2 / 2;
+
+    grid-column: 1 / 11;
+
+    text-align: left;
+
+    font-family: 'Neucha', cursive;
+
+    font-size: 80px;
+
+    margin-left: 50px;
+
+    color: white;
+
+
+}
+
+
+
+
 .carousel-fantasia {
 
     grid-row: 3 / 5;
+
+    grid-column: 1 / 11;
+
+    margin-left: 50px;
+
+    margin-right: 50px;
+}
+
+
+
+
+.title-suspense {
+
+
+    grid-row: 5 / 5;
+
+    grid-column: 1 / 11;
+
+    text-align: left;
+
+    font-family: 'Neucha', cursive;
+
+    font-size: 80px;
+
+    margin-left: 50px;
+
+
+    color: white;
+
+
+}
+
+
+
+
+.carousel-suspense {
+
+    grid-row: 6 / 8;
+
+    grid-column: 1 / 11;
+
+    margin-left: 50px;
+
+    margin-right: 50px;
+}
+
+
+
+
+
+
+.title-drama {
+
+
+    grid-row: 8 / 8;
+
+    grid-column: 1 / 11;
+
+    text-align: left;
+
+    font-family: 'Neucha', cursive;
+
+    font-size: 80px;
+
+    margin-left: 50px;
+
+
+    color: white;
+
+
+}
+
+
+
+
+.carousel-drama {
+
+    grid-row: 9 / 11;
+
+    grid-column: 1 / 11;
+
+    margin-left: 50px;
+
+    margin-right: 50px;
+}
+
+
+
+
+
+.title-terror {
+
+
+    grid-row: 11 / 11;
+
+    grid-column: 1 / 11;
+
+    text-align: left;
+
+    font-family: 'Neucha', cursive;
+
+    font-size: 80px;
+
+    margin-left: 50px;
+
+
+    color: white;
+
+
+}
+
+
+
+
+.carousel-terror {
+
+    grid-row: 12/ 14;
+
+    grid-column: 1 / 11;
+
+    margin-left: 50px;
+
+    margin-right: 50px;
+}
+
+
+
+
+
+
+
+.title-auto-ajuda {
+
+
+    grid-row: 14 / 14;
+
+    grid-column: 1 / 11;
+
+    text-align: left;
+
+    font-family: 'Neucha', cursive;
+
+    font-size: 80px;
+
+    margin-left: 50px;
+
+
+    color: white;
+
+
+}
+
+
+
+
+.carousel-auto-ajuda {
+
+    grid-row: 15/ 17;
+
+    grid-column: 1 / 11;
+
+    margin-left: 50px;
+
+    margin-right: 50px;
+}
+
+
+
+
+
+
+.title-romance {
+
+
+    grid-row: 17 / 17;
+
+    grid-column: 1 / 11;
+
+    text-align: left;
+
+    font-family: 'Neucha', cursive;
+
+    font-size: 80px;
+
+    margin-left: 50px;
+
+
+    color: white;
+
+
+}
+
+
+
+
+.carousel-romance {
+
+    grid-row: 18/ 20;
 
     grid-column: 1 / 11;
 
