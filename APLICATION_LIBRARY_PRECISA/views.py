@@ -24,7 +24,7 @@ def index(request):
     print(list(books.values()))
     print("\n")
 
-    return JsonResponse({"teste":1})
+    return JsonResponse({"teste":2})
 
 
 
