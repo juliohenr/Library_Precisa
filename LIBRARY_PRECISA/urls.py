@@ -20,5 +20,8 @@ urlpatterns = [
     
     path('admin/', admin.site.urls),
     path('get_books/',include('APLICATION_LIBRARY_PRECISA.urls')),
+    path('add_books/',include('APLICATION_LIBRARY_PRECISA.urls')),
+    path('delete_books/',include('APLICATION_LIBRARY_PRECISA.urls')),
+    path('update_books/',include('APLICATION_LIBRARY_PRECISA.urls')),
     path('',include('APLICATION_LIBRARY_PRECISA.urls')),
 ]
