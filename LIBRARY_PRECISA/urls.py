@@ -23,5 +23,6 @@ urlpatterns = [
     path('add_books/',include('APLICATION_LIBRARY_PRECISA.urls')),
     path('delete_books/',include('APLICATION_LIBRARY_PRECISA.urls')),
     path('update_books/',include('APLICATION_LIBRARY_PRECISA.urls')),
+    path('test_binary/',include('APLICATION_LIBRARY_PRECISA.urls')),
     path('',include('APLICATION_LIBRARY_PRECISA.urls')),
 ]

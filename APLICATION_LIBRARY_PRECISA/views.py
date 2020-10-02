@@ -7,6 +7,11 @@ from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 
+def upload_func(file):
+    with open('./filename.jpg', 'wb+') as f:
+        for chunk in file.chunks():
+            f.write(chunk)
+
 @csrf_exempt
 def get_books(request):
 
@@ -23,6 +28,8 @@ def add_books(request):
 
 
     data = json.loads(request.body)
+
+    
 
 
     Book_description.objects.create(book_name=data['book_name'],
@@ -100,9 +107,29 @@ def update_books(request):
 
 
 
+@csrf_exempt
+def test_binary(request):
 
+    #data = json.loads(request.body)
 
+    #print(data)
 
+    print("\n")
+    print("\n")
+    #print(data)
+    data = json.loads(request.POST.get('request'))
+    print(data)
+    print("\n")
+    print(request.FILES.get('file'))
+    print("\n")
+    print(type(request.FILES.get('file')))
+    print("\n")
+    picture = request.FILES.get('file')
+
+    
+    upload_func(picture)
+
+    return JsonResponse({"teste":"succeed"})
 
 
 
