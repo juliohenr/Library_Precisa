@@ -7,8 +7,8 @@ from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 
-def upload_func(file):
-    with open('./filename.jpg', 'wb+') as f:
+def upload_func(file,name_file):
+    with open('./UPLOAD/{}'.format(name_file), 'wb+') as f:
         for chunk in file.chunks():
             f.write(chunk)
 
@@ -24,12 +24,15 @@ def get_books(request):
 @csrf_exempt
 def add_books(request):
 
-    books = Book_description.objects.all()
 
+    data = json.loads(request.POST.get('request'))
 
-    data = json.loads(request.body)
+    picture = request.FILES.get('file')
+
+    name_file = str(data['book_name'])+"_"+str(data['volume'])+"_"+str(data['version'])+"_"+str(data['category'])+".jpg"
 
     
+    upload_func(picture,name_file)
 
 
     Book_description.objects.create(book_name=data['book_name'],
