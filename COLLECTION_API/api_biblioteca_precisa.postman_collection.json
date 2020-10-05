@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "093c7710-b065-4b23-a7dd-9d8f7c5145d4",
+		"name": "api_biblioteca_precisa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get_books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/get_books",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"get_books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_books",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "request",
+							"value": "{\"book_name\":\"Qualquer Nome 4\",\"synopsis\":\"qualquer synopsis\",\"author\":\"Qualquer Autor\",\"volume\":1,    \"version\":2,\"category\":\"Fantasia\"}",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/julio/Documentos/projetos/Biblioteca_precisa/front_end/7.jpg"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/add_books",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"add_books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_books",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":11\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/delete_books",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"delete_books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_books",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":2,\n    \"book_name\":\"Rei Leão\",\n    \"author\": \"Jorginho\"\n\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/update_books",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"update_books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test_binary",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/julio/Documentos/projetos/Biblioteca_precisa/front_end/7.jpg"
+						},
+						{
+							"key": "request",
+							"value": "{ \"name\":\"file.txt\"}",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/test_binary",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"test_binary"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
