@@ -18,3 +18,7 @@ class Book_description(models.Model):
     category = models.CharField(max_length=200)
 
     date_insert_book = models.DateTimeField(default=datetime.now,blank=True)
+
+    url_image = models.CharField(max_length=200)
+
+    

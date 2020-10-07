@@ -1,0 +1,588 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIBLIOTECA PRECISA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+    
+
+    <link rel="stylesheet" type="text/css" href="{% static 'slick.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'slick-theme.css' %}"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'google-fonts.css' %}"> 
+    <link rel="stylesheet" href="{% static 'materialize.css' %}"> 
+    <link rel="stylesheet" href= "{% static 'styles.css' %}"> 
+    
+</head>
+<body class="app">
+
+    <header class="top">
+
+        <a href="" style="text-decoration: none;" class="button-inicio">Início</a>
+
+        <input class="input-search-bar" type='text'>
+
+        <!--<a href="" style="text-decoration: none;" class="button-search">Search</a>-->
+
+        <a class="waves-effect waves-light btn button-confirm-search"><i class="material-icons left">search</i>Search</a>
+
+
+    </header>
+
+    <main class="content">
+
+        <div class="title-div"><h1 class='text-title'><strong>Biblioteca Precisa</strong></h1></div>
+        <h1 class="title-fantasy">Fantasia</h1>
+
+        
+        
+        
+        <div class="carousel-fantasia">
+
+
+
+            {% if data_book %}
+            {% for book in data_book  %}
+
+
+            <div class="element-carousel">
+                
+                <img src="{{book.url_image}}" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>{{book.book_name}} - {{book.author}}</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            </div>
+
+            {% endfor %}
+            {% else %}
+            {% endif %}
+
+        </div>
+
+        <!--
+        <div class="carousel-fantasia">
+            <div class="element-carousel">
+                
+                <img src="7.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>Harry Potter e a ordem da Fênix - J . K Rolling</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="senhor_dos_aneis.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>Senhor dos Anéis Sociedade do Anel - J . R . R TOLKIEN</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="eragon_heranca.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>Herança - Christopher Paolini</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="cronicas_de_gelo_e_fogo.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>As Crônicas de Gelo e Fogo - George R.R. Martin</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="excalibur.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>Excalibur - Bernard Cornwell</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="hobbit.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>O Hobbit - J . R . R TOLKIEN</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+
+        </div>
+
+        -->
+
+
+        <h1 class="title-suspense">Suspense</h1>
+
+
+        <div class="carousel-suspense">
+            <div class="element-carousel">
+                
+                <img src="7.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>Harry Potter e a ordem da Fênix - J . K Rolling</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="senhor_dos_aneis.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>Senhor dos Anéis Sociedade do Anel - J . R . R TOLKIEN</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="eragon_heranca.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>Herança - Christopher Paolini</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="cronicas_de_gelo_e_fogo.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>As Crônicas de Gelo e Fogo - George R.R. Martin</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="excalibur.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>Excalibur - Bernard Cornwell</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="hobbit.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>O Hobbit - J . R . R TOLKIEN</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+
+        </div>
+
+
+
+        <h1 class="title-drama">Drama</h1>
+
+
+        <div class="carousel-drama">
+            <div class="element-carousel">
+                
+                <img src="7.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>Harry Potter e a ordem da Fênix - J . K Rolling</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="senhor_dos_aneis.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>Senhor dos Anéis Sociedade do Anel - J . R . R TOLKIEN</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="eragon_heranca.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>Herança - Christopher Paolini</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="cronicas_de_gelo_e_fogo.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>As Crônicas de Gelo e Fogo - George R.R. Martin</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="excalibur.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>Excalibur - Bernard Cornwell</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="hobbit.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>O Hobbit - J . R . R TOLKIEN</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+
+        </div>
+
+
+    <h1 class="title-terror">Terror</h1>
+
+        <div class="carousel-terror">
+            <div class="element-carousel">
+                
+                <img src="7.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>Harry Potter e a ordem da Fênix - J . K Rolling</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="senhor_dos_aneis.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>Senhor dos Anéis Sociedade do Anel - J . R . R TOLKIEN</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="eragon_heranca.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>Herança - Christopher Paolini</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="cronicas_de_gelo_e_fogo.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>As Crônicas de Gelo e Fogo - George R.R. Martin</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="excalibur.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>Excalibur - Bernard Cornwell</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="hobbit.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>O Hobbit - J . R . R TOLKIEN</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+
+        </div>
+
+
+
+        <h1 class="title-auto-ajuda">Auto-ajuda</h1>
+
+        <div class="carousel-auto-ajuda">
+            <div class="element-carousel">
+                
+                <img src="7.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>Harry Potter e a ordem da Fênix - J . K Rolling</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="senhor_dos_aneis.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>Senhor dos Anéis Sociedade do Anel - J . R . R TOLKIEN</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="eragon_heranca.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>Herança - Christopher Paolini</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="cronicas_de_gelo_e_fogo.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>As Crônicas de Gelo e Fogo - George R.R. Martin</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="excalibur.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>Excalibur - Bernard Cornwell</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="hobbit.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>O Hobbit - J . R . R TOLKIEN</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <h1 class="title-romance">Romance</h1>
+
+        <div class="carousel-romance">
+            <div class="element-carousel">
+                
+                <img src="7.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>Harry Potter e a ordem da Fênix - J . K Rolling</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="senhor_dos_aneis.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>Senhor dos Anéis Sociedade do Anel - J . R . R TOLKIEN</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="eragon_heranca.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>Herança - Christopher Paolini</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="cronicas_de_gelo_e_fogo.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>As Crônicas de Gelo e Fogo - George R.R. Martin</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="excalibur.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>Excalibur - Bernard Cornwell</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+            <div class="element-carousel">
+                
+                <img src="hobbit.jpg" class="image-element-carousel" alt="">
+                
+                <h1 class='text-element-carousel'>O Hobbit - J . R . R TOLKIEN</h1>
+
+                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+            
+            
+            
+            </div>
+
+        </div>
+
+
+
+
+
+    </main>
+
+    <footer class="footer">footer</footer>
+
+
+
+
+
+
+</body>
+
+<script type="text/javascript" src="{% static 'jquery.js' %}"></script>   
+
+
+
+
+<script type="text/javascript" src="{% static 'slick.min.js' %}"></script>
+
+<script type="text/javascript">
+ 
+    $('.carousel-fantasia').slick({
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 3
+});
+
+$('.carousel-suspense').slick({
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 3
+});
+
+$('.carousel-drama').slick({
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 3
+});
+
+$('.carousel-terror').slick({
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 3
+});
+
+$('.carousel-auto-ajuda').slick({
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 3
+});
+
+$('.carousel-romance').slick({
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 3
+});
+
+
+   
+</script>
+
+ 
+
+</html>

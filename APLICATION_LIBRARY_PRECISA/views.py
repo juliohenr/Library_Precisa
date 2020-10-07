@@ -4,6 +4,8 @@ from django.http import HttpResponse
 from django.http import JsonResponse
 import json
 from django.views.decorators.csrf import csrf_exempt
+import re
+from unicodedata import normalize as norm
 
 # Create your views here.
 
@@ -29,10 +31,35 @@ def add_books(request):
 
     picture = request.FILES.get('file')
 
-    name_file = str(data['book_name'])+"_"+str(data['volume'])+"_"+str(data['version'])+"_"+str(data['category'])+".jpg"
+
+
+    book_name = str(data['book_name'])
+
+    book_name = norm('NFKD', book_name).encode('ascii', 'ignore').decode()
+
+    book_name = re.sub(r'[^a-zA-Z0-9]',' ',book_name)
+
+    book_name = re.sub(r'\s+',' ',book_name)
 
     
-    upload_func(picture,name_file)
+
+    
+
+
+    author = str(data['author'])
+
+    author = norm('NFKD', author).encode('ascii', 'ignore').decode()
+
+    author = re.sub(r'[^a-zA-Z0-9]',' ',author)
+
+    author = re.sub(r'\s+',' ',author)
+
+    
+
+    url_image = book_name+"_"+author+"_"+str(data['volume'])+"_"+str(data['version'])+"_"+str(data['category'])+".jpg"
+
+    
+    upload_func(picture,url_image)
 
 
     Book_description.objects.create(book_name=data['book_name'],
@@ -40,7 +67,8 @@ def add_books(request):
                                     author = data['author'],
                                     volume=data['volume'],
                                     version=data['version'],
-                                    category=data['category'])
+                                    category=data['category'],
+                                    url_image = './UPLOAD/{}'.format(url_image))
 
 
     return JsonResponse({"response":"row added"})
@@ -142,7 +170,13 @@ def index(request):
     books = Book_description.objects.all()
 
 
-    return JsonResponse({"teste":2})
+    data = {
 
+        'data_book': books
+    }
+
+    return render(request,"index.html",data)
+
+    
 
 
