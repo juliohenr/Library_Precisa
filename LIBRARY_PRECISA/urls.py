@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     
@@ -24,5 +26,7 @@ urlpatterns = [
     path('delete_books/',include('APLICATION_LIBRARY_PRECISA.urls')),
     path('update_books/',include('APLICATION_LIBRARY_PRECISA.urls')),
     path('test_binary/',include('APLICATION_LIBRARY_PRECISA.urls')),
+    path('delete_all/',include('APLICATION_LIBRARY_PRECISA.urls')),
     path('',include('APLICATION_LIBRARY_PRECISA.urls')),
-]
+
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,6 +1,8 @@
 {% load static %}
 
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,7 +55,7 @@
 
             <div class="element-carousel">
                 
-                <img src="{{book.url_image}}" class="image-element-carousel" alt="">
+                <img src="{% static book.url_image %}" class="image-element-carousel" alt="">
                 
                 <h1 class='text-element-carousel'>{{book.book_name}} - {{book.author}}</h1>
 
@@ -138,7 +140,7 @@
 
         </div>
 
-        -->
+        
 
 
         <h1 class="title-suspense">Suspense</h1>
@@ -520,7 +522,7 @@
         </div>
 
 
-
+-->
 
 
     </main>

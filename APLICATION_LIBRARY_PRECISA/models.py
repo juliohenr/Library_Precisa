@@ -1,6 +1,7 @@
 from django.db import models
 from datetime import datetime
 
+
 # Create your models here.
 
 class Book_description(models.Model):
@@ -20,5 +21,9 @@ class Book_description(models.Model):
     date_insert_book = models.DateTimeField(default=datetime.now,blank=True)
 
     url_image = models.CharField(max_length=200)
+
+  
+
+
 
     

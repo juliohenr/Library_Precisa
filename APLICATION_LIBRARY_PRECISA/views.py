@@ -10,7 +10,7 @@ from unicodedata import normalize as norm
 # Create your views here.
 
 def upload_func(file,name_file):
-    with open('./UPLOAD/{}'.format(name_file), 'wb+') as f:
+    with open('APLICATION_LIBRARY_PRECISA/static/{}'.format(name_file), 'wb+') as f:
         for chunk in file.chunks():
             f.write(chunk)
 
@@ -68,7 +68,7 @@ def add_books(request):
                                     volume=data['volume'],
                                     version=data['version'],
                                     category=data['category'],
-                                    url_image = './UPLOAD/{}'.format(url_image))
+                                    url_image = url_image)
 
 
     return JsonResponse({"response":"row added"})
@@ -178,5 +178,9 @@ def index(request):
     return render(request,"index.html",data)
 
     
+@csrf_exempt
+def delete_all(request):
 
+  Book_description.objects.all().delete()
 
+  return JsonResponse({"response":"all rows deleted"})
