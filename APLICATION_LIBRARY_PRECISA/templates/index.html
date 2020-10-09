@@ -52,6 +52,9 @@
             {% if data_book %}
             {% for book in data_book  %}
 
+            
+
+            {% if book.category == 'Fantasia' %}
 
             <div class="element-carousel">
                 
@@ -62,6 +65,9 @@
                 <button class='button-element-carousel'><strong>Leia mais</strong></button>
             
             </div>
+
+            {% else %}
+            {% endif %}
 
             {% endfor %}
             {% else %}

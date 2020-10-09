@@ -56,7 +56,7 @@ def add_books(request):
 
     
 
-    url_image = book_name+"_"+author+"_"+str(data['volume'])+"_"+str(data['version'])+"_"+str(data['category'])+".jpg"
+    url_image = 'images/'+book_name+"_"+author+"_"+str(data['volume'])+"_"+str(data['version'])+"_"+str(data['category'])+".jpg"
 
     
     upload_func(picture,url_image)
