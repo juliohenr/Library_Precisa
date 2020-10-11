@@ -8,5 +8,6 @@ urlpatterns = [
     path('update_books',views.update_books,name='update_books'),
     path('test_binary',views.test_binary,name='test_binary'),
     path('delete_all',views.delete_all,name='delete_all'),
+    path('search_results',views.search_results,name='search_results'),
     path('',views.index,name='index'),
 ]

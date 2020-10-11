@@ -26,13 +26,13 @@
 
     <header class="top">
 
-        <a href="" style="text-decoration: none;" class="button-inicio">Início</a>
+        <a style="text-decoration: none;" class="button-inicio" href="{% url 'index' %}">Início</a>
 
         <input class="input-search-bar" type='text'>
 
         <!--<a href="" style="text-decoration: none;" class="button-search">Search</a>-->
 
-        <a class="waves-effect waves-light btn button-confirm-search"><i class="material-icons left">search</i>Search</a>
+        <a class="waves-effect waves-light btn button-confirm-search" href="{% url 'search_results' %}"><i class="material-icons left">search</i>Search</a>
 
 
     </header>

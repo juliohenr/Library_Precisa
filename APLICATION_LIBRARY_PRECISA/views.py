@@ -177,6 +177,20 @@ def index(request):
 
     return render(request,"index.html",data)
 
+
+def search_results(request):
+
+    books = Book_description.objects.all()
+
+
+    data = {
+
+        'data_book': books
+    }
+
+    return render(request,"search_products.html",data)
+
+
     
 @csrf_exempt
 def delete_all(request):
