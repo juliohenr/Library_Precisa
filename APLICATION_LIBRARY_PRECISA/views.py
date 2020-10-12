@@ -9,7 +9,7 @@ from unicodedata import normalize as norm
 
 # Create your views here.
 
-SEARCH_RESULTS = {'results':None}
+SEARCH_RESULTS = {'results':[]}
 
 def upload_func(file,name_file):
     with open('APLICATION_LIBRARY_PRECISA/static/{}'.format(name_file), 'wb+') as f:
@@ -188,20 +188,49 @@ def search_results(request):
 
     books = Book_description.objects.all()
 
-    print("\n")
-    print("\n")
-    print("\n")
-    print(len(books))
-    print("\n")
-    print("\n")
-    print("\n")
+
+    try:
+
+
+        search_str_modified = SEARCH_RESULTS['results'].lower()
+
+
+        search_str_modified = search_str_modified.replace(" ","")
+
+
+    except:
+
+        search_str_modified = ""
+
+    list_books_search = []
+
+
+    for iterator_book in books:
+
+        str_base_book = iterator_book.book_name
+
+        str_base_book = str_base_book.lower()
+
+        str_base_book = str_base_book.replace(" ","")
+
+
+        if str_base_book[0:len(search_str_modified)]==search_str_modified:
+
+
+
+            list_books_search.append({"book_name":iterator_book.book_name,"author":iterator_book.author,"url":iterator_book.url_image})
+
+
 
 
     data = {
 
         'data_book': books,
+        'data_book_modified': list_books_search,
         'search':SEARCH_RESULTS['results']
     }
+
+
 
     return render(request,"search_products.html",data)
 

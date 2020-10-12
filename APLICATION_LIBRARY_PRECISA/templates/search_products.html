@@ -85,12 +85,12 @@
 
 
             {% if data_book %}
-            {% for book in data_book  %}
+            {% for book in data_book_modified  %}
 
-            {% if book.book_name == search  %}
+          
             <div class="element-carousel">
                 
-                <img src="{% static book.url_image %}" class="image-element-carousel" alt="">
+                <img src="{% static book.url %}" class="image-element-carousel" alt="">
                 
                 <h1 class='text-element-carousel'>{{book.book_name}} - {{book.author}}</h1>
 
@@ -98,7 +98,7 @@
             
             </div>
 
-            {% endif %}
+          
             {% endfor %}
             {% else %}
             {% endif %}
