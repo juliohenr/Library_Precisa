@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="{% static 'google-fonts.css' %}"> 
     <link rel="stylesheet" href="{% static 'materialize.css' %}"> 
     <link rel="stylesheet" href= "{% static 'styles_search.css' %}"> 
+
     
 </head>
 <body class="app">
@@ -29,6 +30,10 @@
         <a style="text-decoration: none;" class="button-inicio" href="{% url 'index' %}">Início</a>
 
         <input class="input-search-bar" type='text'>
+
+        <div class="suggestions">
+                
+        </div>
 
         <!--<a href="" style="text-decoration: none;" class="button-search">Search</a>-->
 
@@ -40,7 +45,38 @@
     <main class="content">
 
         <div class="title-div"><h1 class='text-title'><strong>Biblioteca Precisa</strong></h1></div>
+        
+        
+        <div class="div-names hidden">
+
+            {% if data_book %}
+            {% for book in data_book  %}
+    
+    
+            <div class="element-carousel">
+                
+    
+                <h1 class='text-element-carousel-name hidden'>{{book.book_name}}</h1>
+                
+     
+            </div>
+    
+            {% endfor %}
+            {% else %}
+            {% endif %}
+    
+    
+        </div>
+        
+        
+        
+        
+        
+        
+        
         <h1 class="title-fantasy">Produtos Encontrados</h1>
+
+    
 
         
                 
@@ -51,7 +87,7 @@
             {% if data_book %}
             {% for book in data_book  %}
 
-
+            {% if book.book_name == search  %}
             <div class="element-carousel">
                 
                 <img src="{% static book.url_image %}" class="image-element-carousel" alt="">
@@ -62,6 +98,7 @@
             
             </div>
 
+            {% endif %}
             {% endfor %}
             {% else %}
             {% endif %}
@@ -88,6 +125,9 @@
 
 
 <script type="text/javascript" src="{% static 'slick.min.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'button_search.js' %}"></script>
+
 
 <script type="text/javascript">
  

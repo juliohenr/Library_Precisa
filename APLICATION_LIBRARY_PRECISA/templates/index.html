@@ -30,6 +30,10 @@
 
         <input class="input-search-bar" type='text'>
 
+        <div class="suggestions">
+                
+        </div>
+
         <!--<a href="" style="text-decoration: none;" class="button-search">Search</a>-->
 
         <a class="waves-effect waves-light btn button-confirm-search" href="{% url 'search_results' %}"><i class="material-icons left">search</i>Search</a>
@@ -40,6 +44,28 @@
     <main class="content">
 
         <div class="title-div"><h1 class='text-title'><strong>Biblioteca Precisa</strong></h1></div>
+
+        <div class="div-names hidden" hidden>
+
+        {% if data_book %}
+        {% for book in data_book  %}
+
+
+        <div class="element-carousel hidden" hidden>
+            
+
+            <h1 class='text-element-carousel-name hidden' hidden>{{book.book_name}}</h1>
+            
+ 
+        </div>
+
+        {% endfor %}
+        {% else %}
+        {% endif %}
+
+
+        </div>
+
         <h1 class="title-fantasy">Fantasia</h1>
 
         
@@ -58,6 +84,8 @@
             <div class="element-carousel">
                 
                 <img src="{% static book.url_image %}" class="image-element-carousel" alt="">
+
+                <h1 class='text-element-carousel-name hidden'>{{book.book_name}}</h1>
                 
                 <h1 class='text-element-carousel'>{{book.book_name}} - {{book.author}}</h1>
 
@@ -76,6 +104,8 @@
 
 
 
+
+
         <h1 class="title-suspense">Suspense</h1>
 
 
@@ -91,6 +121,8 @@
             <div class="element-carousel">
                 
                 <img src="{% static book.url_image %}" class="image-element-carousel" alt="">
+
+                <h1 class='text-element-carousel-name hidden'>{{book.book_name}}</h1>
                 
                 <h1 class='text-element-carousel'>{{book.book_name}} - {{book.author}}</h1>
 
@@ -266,6 +298,9 @@
 
 <script type="text/javascript" src="{% static 'slick.min.js' %}"></script>
 
+
+
+
 <script type="text/javascript">
  
     $('.carousel-fantasia').slick({
@@ -308,6 +343,6 @@ $('.carousel-romance').slick({
    
 </script>
 
- 
+<script type="text/javascript" src="{% static 'button_search_index.js' %}"></script>
 
 </html>

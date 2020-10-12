@@ -9,6 +9,8 @@ from unicodedata import normalize as norm
 
 # Create your views here.
 
+SEARCH_RESULTS = {'results':None}
+
 def upload_func(file,name_file):
     with open('APLICATION_LIBRARY_PRECISA/static/{}'.format(name_file), 'wb+') as f:
         for chunk in file.chunks():
@@ -164,7 +166,7 @@ def test_binary(request):
 
 
 
-
+@csrf_exempt
 def index(request):
 
     books = Book_description.objects.all()
@@ -177,15 +179,28 @@ def index(request):
 
     return render(request,"index.html",data)
 
-
+@csrf_exempt
 def search_results(request):
 
+    #books =  Book_description.objects.get(book_name="harry")
+
+    #books = Book_description.objects.filter(book_name=SEARCH_RESULTS['results'])
+
     books = Book_description.objects.all()
+
+    print("\n")
+    print("\n")
+    print("\n")
+    print(len(books))
+    print("\n")
+    print("\n")
+    print("\n")
 
 
     data = {
 
-        'data_book': books
+        'data_book': books,
+        'search':SEARCH_RESULTS['results']
     }
 
     return render(request,"search_products.html",data)
@@ -198,3 +213,15 @@ def delete_all(request):
   Book_description.objects.all().delete()
 
   return JsonResponse({"response":"all rows deleted"})
+
+
+@csrf_exempt
+def results(request):
+
+
+    data = json.loads(json.dumps(request.POST))
+
+
+    SEARCH_RESULTS['results'] = data['name_book']
+
+    return JsonResponse({"response":"search completed"})

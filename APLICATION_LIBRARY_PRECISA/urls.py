@@ -9,5 +9,6 @@ urlpatterns = [
     path('test_binary',views.test_binary,name='test_binary'),
     path('delete_all',views.delete_all,name='delete_all'),
     path('search_results',views.search_results,name='search_results'),
+    path('results',views.results,name='results'),
     path('',views.index,name='index'),
 ]
