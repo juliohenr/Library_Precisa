@@ -2,7 +2,7 @@
 
 ## Resumo
 
-Este projeto se trata de uma biblioteca virtual, o qual armazena em um banco de dados postgreSQL o nome do livro, o autor, volume e a edição. Também é armazenada a imagem da capa, porém a mesma é armazenada no servidor.
+Este projeto se trata de uma biblioteca virtual, o qual armazena em um banco de dados postgreSQL o nome do livro, o autor, categoria (Fantasia, Auto-ajuda, Suspense, Drama, Romance e Terror), volume e a edição. Também é armazenada a imagem da capa, porém a mesma é armazenada no servidor.
 
 ## Tecnologias Utilizadas
 
@@ -40,7 +40,12 @@ a aplicação web possui 3 interfaces: A primeira interface exibe todos os livro
 
 ### Carrosel de livros
 
+![carrosel](https://user-images.githubusercontent.com/40969977/96358203-f8527300-10da-11eb-8ac0-abaab74f0aff.png)
+
 ### Botão "leia mais"
+
+
+![Captura de tela de 2020-10-18 00-48-44](https://user-images.githubusercontent.com/40969977/96358281-c7bf0900-10db-11eb-9ccf-fd531f0d1866.png)
 
 ## Execução 
 
