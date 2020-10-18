@@ -8,7 +8,7 @@ for (var i=0; i < tableRegisters.find(".text-element-carousel-name").length; i++
   // Look no need to do list[i] in the body of the loop
 
   names.push({name:tableRegisters.find(".text-element-carousel-name")[i].innerHTML})
-  console.log("Looping: index ", i, "item: " + tableRegisters.find(".text-element-carousel-name")[i].innerHTML);
+
 }
 
 
@@ -35,19 +35,12 @@ dados = {name_book:text}
     $.post("http://localhost:3000/results",dados).fail(function(){console.log("FAIL....")}).done(
 
 
-
-
     function(){
 
         console.log("DONE....");
-     
 
     }
     )
-
-
-    
-
 }
 
 
@@ -55,10 +48,6 @@ dados = {name_book:text}
 searchInput.on("input", function(){
 
 
-    console.log(names)
-
-
-    
     tableRegisters.each(function(){
 
         

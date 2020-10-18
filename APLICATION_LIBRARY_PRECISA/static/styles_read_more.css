@@ -1,0 +1,382 @@
+.app {
+    background: #f1f1f1;
+    display: grid;  
+    font-family: Arial, Helvetica, sans-serif;
+    grid-template-areas: "cabecalho" "conteudo" "rodape";
+    grid-template-columns: 100%;
+    grid-template-rows: 50px 3700px 20px;
+    
+}
+
+.top {
+
+    grid-area: cabecalho;
+    /*background: linear-gradient(to right,rgb(0, 0, 0),rgb(0, 0, 0));*/
+    /*background:red;*/
+    background: linear-gradient(to right,rgb(13, 14, 13),rgb(45, 46, 45));
+    
+    color: white;
+
+
+
+
+    display: grid;
+
+    grid-template-rows: 20% 60% 20%;
+
+    grid-template-columns: 20% 40% 30% 10%;
+
+    
+}
+ 
+
+
+.button-inicio {
+
+    color: white;
+
+    font-family: 'Neucha', cursive;
+
+    font-size: 30px;
+
+    margin-left: 20px; 
+
+    margin-top: 5px;
+
+
+    grid-row: 2 / 2;
+
+    grid-column: 1 / 1;
+
+
+}
+
+.button-inicio:hover {
+
+
+    color: #DB7093;
+
+}
+
+.input-search-bar {
+
+
+    
+
+    float:right;
+
+    grid-row: 2 / 2;
+
+    grid-column: 3 / 3;
+
+
+    color: white !important;
+    
+    border-bottom: 1px solid white !important;
+
+
+
+
+    height: 30px !important;
+
+
+
+}
+
+.input-search-bar:focus {
+
+    outline: transparent !important;
+
+    color: white !important;
+
+    border-bottom: 3px solid #DB7093 !important;
+
+    font-family: 'Neucha', cursive;
+
+}
+
+
+.button-confirm-search {
+
+
+    color: white;
+
+    font-family: 'Neucha', cursive;
+
+    font-size: 30px;
+
+    width: 200px;
+
+
+    grid-row: 2 / 2;
+
+    grid-column: 4 / 4;
+
+    
+
+    margin-top: 2px;
+
+
+    background-color: transparent !important;
+
+    
+
+
+
+
+}
+
+.button-confirm-search:hover {
+
+
+    color: #DB7093;
+
+}
+.content {
+
+
+    grid-area: conteudo;
+    /*background: linear-gradient(to right,rgb(23, 66, 6),rgb(3, 32, 4))*/
+    /*background: url("old_paper_texture4.jpg") center / cover no-repeat;*/
+    background: linear-gradient(to right,rgb(13, 14, 13),rgb(45, 46, 45));
+ 
+    display: grid;  
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-rows: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+}
+
+
+
+
+.footer {
+    grid-area: rodape;
+    /*background: linear-gradient(to right,rgb(23, 66, 6),rgb(99, 7, 86))*/
+
+    background: linear-gradient(to right,rgb(13, 14, 13),rgb(45, 46, 45));
+
+    color: white;
+}
+
+.title-div {
+
+
+    grid-row: 1 / 1;
+
+    grid-column: 1 / 11;
+
+
+    text-align: center;
+
+    align-items: center;
+
+    font-family: 'Indie Flower', cursive;
+
+    font-size: 80px;
+
+    /*background: #DB7093;*/
+
+    background:linear-gradient(to left,rgb(248, 58, 122),rgb(77, 50, 77));
+
+
+    color: white;
+
+    display: grid;
+
+    grid-template-columns: 25% 25% 25% 25% ;
+    grid-template-rows: 25% 25% 25% 25% ;
+
+
+
+
+}
+
+
+.text-title {
+
+
+    grid-row: 2 / 4;
+
+    grid-column: 2 / 4;
+
+
+    font-family: 'Indie Flower', cursive;
+
+    font-size: 100px;
+
+    
+}
+
+
+.image-read-more {
+
+margin-top: 20px;
+
+grid-row: 2 / 4;
+
+grid-column: 2 / 6;
+
+height: 800px;
+
+width: 600px;
+}
+
+.name-read-more {
+
+    grid-row: 2 / 2;
+    
+    grid-column: 6 / 10;
+
+    color: white;
+
+    font-family: 'Indie Flower', cursive;
+
+    font-size: 50px;
+    
+    }
+
+.name-read-more > strong{
+
+    color: rgb(248, 58, 122);
+
+}
+
+.author-read-more {
+
+    grid-row: 3 / 3;
+    
+    grid-column: 6 / 10;
+
+    color: white;
+
+    font-family: 'Indie Flower', cursive;
+
+    font-size: 50px;
+    
+}
+
+.author-read-more > strong{
+
+    color: rgb(248, 58, 122);
+
+}
+
+
+.edition-read-more {
+
+    grid-row: 4 / 4;
+    
+    grid-column: 6 / 10;
+
+    color: white;
+
+    font-family: 'Indie Flower', cursive;
+
+    font-size: 50px;
+    
+}
+
+.edition-read-more > strong{
+
+    color: rgb(248, 58, 122);
+
+}
+
+
+.volume-read-more {
+
+    grid-row: 5 / 5;
+    
+    grid-column: 6 / 10;
+
+    color: white;
+
+    font-family: 'Indie Flower', cursive;
+
+    font-size: 50px;
+    
+}
+
+.volume-read-more > strong{
+
+    color: rgb(248, 58, 122);
+
+}
+
+.synopsis-read-more {
+
+    grid-row: 6 / 15;
+    
+    grid-column: 6 / 10;
+
+    color: white;
+
+    font-family: 'Indie Flower', cursive;
+
+    font-size: 50px;
+
+    text-align: justify;
+    
+}
+
+.synopsis-read-more > strong{
+
+    color: rgb(248, 58, 122);
+
+}
+
+
+.suggestions > div {
+
+    padding: 15px;
+    font-size: 20px;
+    color: black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    cursor: pointer;
+
+    background-color: rgb(245, 240, 240);
+    width: 550px;
+
+    grid-row: 2 / 2;
+
+    grid-column: 4 / 4;
+
+    font-family: 'Indie Flower', cursive;
+
+    
+}
+
+
+.suggestions > div:hover {
+
+    /*background-color: #DB7093;*/
+
+    background:rgb(77, 50, 77);
+
+    color: white;
+
+}
+
+
+
+
+.suggestions{
+
+
+
+    margin-top: 50px;
+
+    margin-left: 1100px;
+
+    position: absolute;
+
+    z-index: 1000;
+
+
+}
+
+
+.hidden {
+    visibility: hidden;
+  }

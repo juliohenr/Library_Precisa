@@ -29,6 +29,10 @@ urlpatterns = [
     path('delete_all/',include('APLICATION_LIBRARY_PRECISA.urls')),
     path('search_results/',include('APLICATION_LIBRARY_PRECISA.urls')),
     path('results/',include('APLICATION_LIBRARY_PRECISA.urls')),
+    path('read_more/',include('APLICATION_LIBRARY_PRECISA.urls')),
+    path('persist_read_more/',include('APLICATION_LIBRARY_PRECISA.urls')),
     path('',include('APLICATION_LIBRARY_PRECISA.urls')),
+
+
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

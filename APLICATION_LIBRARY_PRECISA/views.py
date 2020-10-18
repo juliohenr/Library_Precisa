@@ -11,6 +11,8 @@ from unicodedata import normalize as norm
 
 SEARCH_RESULTS = {'results':[]}
 
+READ_MORE_RESULTS = {'data':[]}
+
 def upload_func(file,name_file):
     with open('APLICATION_LIBRARY_PRECISA/static/{}'.format(name_file), 'wb+') as f:
         for chunk in file.chunks():
@@ -99,8 +101,6 @@ def update_books(request):
 
     data = json.loads(request.body)
 
-    print(data)
-
 
     book_obj = Book_description.objects.get(id=data['id'])
     
@@ -145,18 +145,9 @@ def test_binary(request):
 
     #data = json.loads(request.body)
 
-    #print(data)
 
-    print("\n")
-    print("\n")
-    #print(data)
     data = json.loads(request.POST.get('request'))
-    print(data)
-    print("\n")
-    print(request.FILES.get('file'))
-    print("\n")
-    print(type(request.FILES.get('file')))
-    print("\n")
+
     picture = request.FILES.get('file')
 
     
@@ -178,6 +169,22 @@ def index(request):
     }
 
     return render(request,"index.html",data)
+
+@csrf_exempt
+def read_more(request):
+
+    data_read_more = READ_MORE_RESULTS['data'] 
+
+    books = Book_description.objects.all()
+
+
+    data = {
+
+        'data_read_more': data_read_more,
+        'data_book': books
+    }
+
+    return render(request,"read_more.html",data)
 
 @csrf_exempt
 def search_results(request):
@@ -218,7 +225,9 @@ def search_results(request):
 
 
 
-            list_books_search.append({"book_name":iterator_book.book_name,"author":iterator_book.author,"url":iterator_book.url_image})
+            list_books_search.append({"book_name":iterator_book.book_name,
+            "author":iterator_book.author,
+            "url":iterator_book.url_image,"volume":iterator_book.volume,"version":iterator_book.version,"synopsis":iterator_book.synopsis})
 
 
 
@@ -254,3 +263,18 @@ def results(request):
     SEARCH_RESULTS['results'] = data['name_book']
 
     return JsonResponse({"response":"search completed"})
+
+
+
+@csrf_exempt
+def persist_read_more(request):
+
+
+    data = json.loads(json.dumps(request.POST))
+
+    #data = json.loads(request.POST.get('info'))
+
+
+    READ_MORE_RESULTS['data'] = data
+
+    return JsonResponse({"response":"read more completed"})

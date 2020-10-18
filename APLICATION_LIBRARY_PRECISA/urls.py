@@ -10,5 +10,8 @@ urlpatterns = [
     path('delete_all',views.delete_all,name='delete_all'),
     path('search_results',views.search_results,name='search_results'),
     path('results',views.results,name='results'),
+    path('read_more',views.read_more,name='read_more'),
+    path('persist_read_more',views.persist_read_more,name='persist_read_more'),
     path('',views.index,name='index'),
 ]
+

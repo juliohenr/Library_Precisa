@@ -15,8 +15,8 @@
 
     <link rel="stylesheet" type="text/css" href="{% static 'slick.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'slick-theme.css' %}"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" />
+    <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" />-->
+    <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" />-->
     <link rel="stylesheet" href="{% static 'google-fonts.css' %}"> 
     <link rel="stylesheet" href="{% static 'materialize.css' %}"> 
     <link rel="stylesheet" href= "{% static 'styles.css' %}"> 
@@ -85,11 +85,25 @@
                 
                 <img src="{% static book.url_image %}" class="image-element-carousel" alt="">
 
-                <h1 class='text-element-carousel-name hidden'>{{book.book_name}}</h1>
+                <h1 class='text-element-carousel-name' hidden>{{book.book_name}}</h1>
+
+                <h1 class='text-element-carousel-img_url' hidden>{{book.url_image}}</h1>
+
+                <h1 class='text-element-carousel-author' hidden>{{book.author}}</h1>
+
+                <h1 class='text-element-carousel-synopsis' hidden>{{book.synopsis}}</h1>
+
+                <h1 class='text-element-carousel-volume' hidden>{{book.volume}}</h1>
+
+                <h1 class='text-element-carousel-edition' hidden>{{book.version}}</h1>
                 
                 <h1 class='text-element-carousel'>{{book.book_name}} - {{book.author}}</h1>
 
-                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+                <!--<button class='button-element-carousel'><strong>Leia mais</strong></button>-->
+
+                <a class="button-element-carousel" href="{% url 'read_more' %}"><strong>Leia mais</strong></a>
+
+
             
             </div>
 
@@ -120,13 +134,27 @@
 
             <div class="element-carousel">
                 
+          
                 <img src="{% static book.url_image %}" class="image-element-carousel" alt="">
 
-                <h1 class='text-element-carousel-name hidden'>{{book.book_name}}</h1>
+                <h1 class='text-element-carousel-name' hidden>{{book.book_name}}</h1>
+
+                <h1 class='text-element-carousel-img_url' hidden>{{book.url_image}}</h1>
+
+                <h1 class='text-element-carousel-author' hidden>{{book.author}}</h1>
+
+                <h1 class='text-element-carousel-synopsis' hidden>{{book.synopsis}}</h1>
+
+                <h1 class='text-element-carousel-volume' hidden>{{book.volume}}</h1>
+
+                <h1 class='text-element-carousel-edition' hidden>{{book.version}}</h1>
                 
                 <h1 class='text-element-carousel'>{{book.book_name}} - {{book.author}}</h1>
 
-                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+                <!--<button class='button-element-carousel'><strong>Leia mais</strong></button>-->
+
+                <a class="button-element-carousel" href="{% url 'read_more' %}"><strong>Leia mais</strong></a>
+
             
             </div>
 
@@ -155,11 +183,27 @@
 
             <div class="element-carousel">
                 
+          
                 <img src="{% static book.url_image %}" class="image-element-carousel" alt="">
+
+                <h1 class='text-element-carousel-name' hidden>{{book.book_name}}</h1>
+
+                <h1 class='text-element-carousel-img_url' hidden>{{book.url_image}}</h1>
+
+                <h1 class='text-element-carousel-author' hidden>{{book.author}}</h1>
+
+                <h1 class='text-element-carousel-synopsis' hidden>{{book.synopsis}}</h1>
+
+                <h1 class='text-element-carousel-volume' hidden>{{book.volume}}</h1>
+
+                <h1 class='text-element-carousel-edition' hidden>{{book.version}}</h1>
                 
                 <h1 class='text-element-carousel'>{{book.book_name}} - {{book.author}}</h1>
 
-                <button class='button-element-carousel'><strong>Leia mais</strong></button>
+                <!--<button class='button-element-carousel'><strong>Leia mais</strong></button>-->
+
+                <a class="button-element-carousel" href="{% url 'read_more' %}"><strong>Leia mais</strong></a>
+
             
             </div>
 
@@ -186,12 +230,27 @@
 
             <div class="element-carousel">
                 
+          
                 <img src="{% static book.url_image %}" class="image-element-carousel" alt="">
+
+                <h1 class='text-element-carousel-name' hidden>{{book.book_name}}</h1>
+
+                <h1 class='text-element-carousel-img_url' hidden>{{book.url_image}}</h1>
+
+                <h1 class='text-element-carousel-author' hidden>{{book.author}}</h1>
+
+                <h1 class='text-element-carousel-synopsis' hidden>{{book.synopsis}}</h1>
+
+                <h1 class='text-element-carousel-volume' hidden>{{book.volume}}</h1>
+
+                <h1 class='text-element-carousel-edition' hidden>{{book.version}}</h1>
                 
                 <h1 class='text-element-carousel'>{{book.book_name}} - {{book.author}}</h1>
 
-                <button class='button-element-carousel'><strong>Leia mais</strong></button>
-            
+                <!--<button class='button-element-carousel'><strong>Leia mais</strong></button>-->
+
+                <a class="button-element-carousel" href="{% url 'read_more' %}"><strong>Leia mais</strong></a>
+
             </div>
 
             {% else %}
@@ -218,12 +277,27 @@
 
             <div class="element-carousel">
                 
+          
                 <img src="{% static book.url_image %}" class="image-element-carousel" alt="">
+
+                <h1 class='text-element-carousel-name' hidden>{{book.book_name}}</h1>
+
+                <h1 class='text-element-carousel-img_url' hidden>{{book.url_image}}</h1>
+
+                <h1 class='text-element-carousel-author' hidden>{{book.author}}</h1>
+
+                <h1 class='text-element-carousel-synopsis' hidden>{{book.synopsis}}</h1>
+
+                <h1 class='text-element-carousel-volume' hidden>{{book.volume}}</h1>
+
+                <h1 class='text-element-carousel-edition' hidden>{{book.version}}</h1>
                 
                 <h1 class='text-element-carousel'>{{book.book_name}} - {{book.author}}</h1>
 
-                <button class='button-element-carousel'><strong>Leia mais</strong></button>
-            
+                <!--<button class='button-element-carousel'><strong>Leia mais</strong></button>-->
+
+                <a class="button-element-carousel" href="{% url 'read_more' %}"><strong>Leia mais</strong></a>
+
             </div>
 
             {% else %}
@@ -259,12 +333,27 @@
 
             <div class="element-carousel">
                 
+          
                 <img src="{% static book.url_image %}" class="image-element-carousel" alt="">
+
+                <h1 class='text-element-carousel-name' hidden>{{book.book_name}}</h1>
+
+                <h1 class='text-element-carousel-img_url' hidden>{{book.url_image}}</h1>
+
+                <h1 class='text-element-carousel-author' hidden>{{book.author}}</h1>
+
+                <h1 class='text-element-carousel-synopsis' hidden>{{book.synopsis}}</h1>
+
+                <h1 class='text-element-carousel-volume' hidden>{{book.volume}}</h1>
+
+                <h1 class='text-element-carousel-edition' hidden>{{book.version}}</h1>
                 
                 <h1 class='text-element-carousel'>{{book.book_name}} - {{book.author}}</h1>
 
-                <button class='button-element-carousel'><strong>Leia mais</strong></button>
-            
+                <!--<button class='button-element-carousel'><strong>Leia mais</strong></button>-->
+
+                <a class="button-element-carousel" href="{% url 'read_more' %}"><strong>Leia mais</strong></a>
+
             </div>
 
             {% else %}
@@ -344,5 +433,7 @@ $('.carousel-romance').slick({
 </script>
 
 <script type="text/javascript" src="{% static 'button_search_index.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'read_more.js' %}"></script>
 
 </html>

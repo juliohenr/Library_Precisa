@@ -1,0 +1,104 @@
+{% load static %}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIBLIOTECA PRECISA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+    
+
+    <link rel="stylesheet" type="text/css" href="{% static 'slick.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'slick-theme.css' %}"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'google-fonts.css' %}"> 
+    <link rel="stylesheet" href="{% static 'materialize.css' %}"> 
+    <link rel="stylesheet" href= "{% static 'styles_read_more.css' %}"> 
+    
+</head>
+<body class="app">
+
+    <header class="top">
+
+        <a style="text-decoration: none;" class="button-inicio" href="{% url 'index' %}">Início</a>
+
+        <input class="input-search-bar" type='text'>
+
+        <div class="suggestions">
+                
+        </div>
+
+        <!--<a href="" style="text-decoration: none;" class="button-search">Search</a>-->
+
+        <a class="waves-effect waves-light btn button-confirm-search" href="{% url 'search_results' %}"><i class="material-icons left">search</i>Search</a>
+
+
+    </header>
+
+    <main class="content">
+
+        <div class="title-div"><h1 class='text-title'><strong>Biblioteca Precisa</strong></h1></div>
+
+        <div class="div-names hidden" hidden>
+
+        {% if data_book %}
+        {% for book in data_book  %}
+
+
+        <div class="element-carousel hidden" hidden>
+            
+
+            <h1 class='text-element-carousel-name hidden' hidden>{{book.book_name}}</h1>
+            
+ 
+        </div>
+
+        {% endfor %}
+        {% else %}
+        {% endif %}
+
+
+        </div>
+
+    
+        
+
+        <img src="{% static data_read_more.url_image %}" class="image-read-more" alt="">
+
+        <h1 class='name-read-more'><strong>NOME DO LIVRO:</strong> {{data_read_more.name}}</h1>
+        
+        <h1 class='author-read-more'><strong>AUTOR:</strong> {{data_read_more.author}}</h1>
+
+        <h1 class='volume-read-more'><strong>VOLUME:</strong> {{data_read_more.volume}}</h1>
+
+        <h1 class='edition-read-more'><strong>EDIÇÃO:</strong> {{data_read_more.edition}}</h1>
+
+        <h1 class='synopsis-read-more'><strong>SINOPSE:</strong>  {{data_read_more.synopsis}}</h1>
+
+
+    </main>
+
+    <footer class="footer">footer</footer>
+
+
+
+
+
+
+</body>
+
+<script type="text/javascript" src="{% static 'jquery.js' %}"></script>   
+
+
+<script type="text/javascript" src="{% static 'slick.min.js' %}"></script>
+
+
+<script type="text/javascript" src="{% static 'button_search_index.js' %}"></script>
+
+</html>
