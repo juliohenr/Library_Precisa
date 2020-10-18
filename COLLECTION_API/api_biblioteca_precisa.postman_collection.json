@@ -116,43 +116,18 @@
 			"response": []
 		},
 		{
-			"name": "test_binary",
+			"name": "delete_all_books",
 			"request": {
-				"method": "POST",
+				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "file",
-							"type": "file",
-							"src": "/home/julio/Documentos/projetos/Biblioteca_precisa/front_end/7.jpg"
-						},
-						{
-							"key": "request",
-							"value": "{ \"name\":\"file.txt\"}",
-							"type": "text"
-						},
-						{
-							"key": "",
-							"value": "",
-							"type": "text"
-						}
-					],
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
-					"raw": "localhost:3000/test_binary",
+					"raw": "localhost:3000/delete_all",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"test_binary"
+						"delete_all"
 					]
 				}
 			},
