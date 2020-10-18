@@ -2,14 +2,14 @@
 
 ## Resumo
 
-Este projeto se trata de uma biblioteca virtual, o qual armazena em um banco de dados postgres o nome do livro, o autor, volume e a edição. Também é armazenada a imagem da capa, porém a mesma é armazenada no servidor.
+Este projeto se trata de uma biblioteca virtual, o qual armazena em um banco de dados postgreSQL o nome do livro, o autor, volume e a edição. Também é armazenada a imagem da capa, porém a mesma é armazenada no servidor.
 
 ## Tecnologias Utilizadas
 
 <ul>
 <li>Python 3.7</li>
 <li>Django</li>
-<li>Postgres</li>
+<li>PostgreSQL</li>
 <li>Jquery</li>
   
 </ul>  
